@@ -11,6 +11,7 @@ class Person
 
     constructor(thongTinCaNhan)
     {
+        this.thongTinCaNhan = {};
         this.thongTinCaNhan.id = thongTinCaNhan.id || 0;
         this.thongTinCaNhan.hoVaTenDem = thongTinCaNhan.hoVaTenDem || "";  
         this.thongTinCaNhan.ten = thongTinCaNhan.ten || "";
