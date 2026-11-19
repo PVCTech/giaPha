@@ -1,0 +1,170 @@
+.directory-page {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 27px 0;
+}
+
+.directory-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.directory-heading h1 {
+  margin: 8px 0 4px;
+  color: #2f3c32;
+  font-family: var(--serif);
+  font-size: 27px;
+  font-weight: 550;
+  letter-spacing: -.5px;
+}
+
+.directory-heading p {
+  color: #92948c;
+  font-size: 11px;
+}
+
+.directory-count {
+  padding: 7px 10px;
+  border: 1px solid #e8e7e0;
+  border-radius: 6px;
+  color: #6f786e;
+  background: #fff;
+  font-size: 10px;
+}
+
+.directory-table {
+  overflow: hidden;
+  border: 1px solid #ebe9e2;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.directory-table-head,
+.directory-row {
+  display: grid;
+  grid-template-columns: minmax(210px, 2fr) minmax(70px, .7fr) minmax(72px, .7fr) minmax(75px, .7fr) minmax(90px, .9fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.directory-table-head {
+  min-height: 39px;
+  padding: 0 15px;
+  border-bottom: 1px solid #efeee8;
+  color: #a0a198;
+  background: #fcfbf9;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .8px;
+}
+
+.directory-row {
+  width: 100%;
+  min-height: 57px;
+  padding: 0 15px;
+  border: 0;
+  border-bottom: 1px solid #f1f0eb;
+  color: #73796f;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: background .15s;
+}
+
+.directory-row:last-child {
+  border-bottom: 0;
+}
+
+.directory-row:hover {
+  background: #f8faf7;
+}
+
+.directory-person {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.directory-avatar {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 30px;
+  border-radius: 50%;
+  color: #57765d;
+  background: #eaf1e9;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.directory-avatar.female {
+  color: #a06f62;
+  background: #f4e9e5;
+}
+
+.directory-person > span:last-child {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.directory-person strong {
+  overflow: hidden;
+  color: #4a5249;
+  font-size: 10px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.directory-person small {
+  color: #9a9c94;
+  font-size: 8px;
+}
+
+.directory-gender,
+.directory-year,
+.directory-generation {
+  font-size: 9px;
+}
+
+.directory-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #7a8077;
+  font-size: 9px;
+}
+
+.directory-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #82a27b;
+}
+
+.directory-status i.deceased {
+  background: #c3a18a;
+}
+
+@media (max-width: 650px) {
+  .directory-table-head,
+  .directory-row {
+    grid-template-columns: minmax(145px, 1fr) 55px 58px;
+    gap: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .directory-table-head > :nth-child(2),
+  .directory-row > :nth-child(2),
+  .directory-table-head > :nth-child(4),
+  .directory-row > :nth-child(4) {
+    display: none;
+  }
+}

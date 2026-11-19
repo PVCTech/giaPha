@@ -1,0 +1,105 @@
+.tree-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.family-tree-svg {
+  display: block;
+  max-width: none;
+}
+
+.svg-generation-label {
+  fill: #a4a59d;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.svg-generation-line {
+  stroke: #eae8df;
+  stroke-dasharray: 2 4;
+  stroke-width: 1;
+}
+
+.parent-connector {
+  fill: none;
+  stroke: #d4d7ce;
+  stroke-width: 1.5;
+}
+
+.partner-connector {
+  stroke: #c8d1c5;
+  stroke-dasharray: 3 3;
+  stroke-width: 1.5;
+}
+
+.tree-member {
+  cursor: pointer;
+  outline: none;
+}
+
+.member-card {
+  fill: #fff;
+  stroke: #e9e9e2;
+  stroke-width: 1;
+  transition: stroke .15s, fill .15s, filter .15s;
+}
+
+.tree-member:hover .member-card,
+.tree-member:focus-visible .member-card {
+  stroke: #88a18b;
+  filter: drop-shadow(0 3px 4px #243a2418);
+}
+
+.tree-member.is-selected .member-card {
+  fill: #f8fbf7;
+  stroke: #64866a;
+  stroke-width: 1.5;
+  filter: drop-shadow(0 3px 5px #354a351c);
+}
+
+.member-avatar {
+  fill: #e8efe7;
+}
+
+.is-female .member-avatar {
+  fill: #f4e9e5;
+}
+
+.member-initials {
+  fill: #57765d;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.is-female .member-initials {
+  fill: #a06f62;
+}
+
+.member-name {
+  fill: #454c44;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.member-year {
+  fill: #969990;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  font-size: 8px;
+}
+
+.selected-indicator {
+  fill: #638768;
+}
+
+.tree-empty {
+  min-height: 250px;
+  display: grid;
+  place-items: center;
+  color: #92948c;
+  font-size: 12px;
+}
